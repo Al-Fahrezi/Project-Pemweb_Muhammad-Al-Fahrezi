@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Odor Mean Chey', serif;
+}
+nav{
+  background: #03a9f4;
+  padding: 5px 40px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: cyan;
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
+  display: none;
+}
+nav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+
+.hero img{
+  height: 715px;
+}
+
+.container_sambutan{
+  display: flex;
+  width: auto;
+  height: 600px;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4faff;  
+}
+
+.sambutan.satu{
+  flex: 1;
+  padding: 100px;
+}
+
+.sambutan.satu h2{
+  color: #252525;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 52px;
+  line-height: 52px;
+  font-weight: 300;
+}
+
+.sambutan.satu p{
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 20px;
+  color: #3a3a3a;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.foto_kepala.dua{
+  flex: 1;
+  position: relative;
+  right: 100px;
+}
+
+.foto_kepala.dua img{
+  height: 300px;
+  position: relative;
+  left: 300px;
+}
+
+.shape-top{
+position: relative;
+top: 10px;
+}
+.visi-misi{
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #03a9f4;
+  background-image: url(https://mataramweb.com/demo/wp-content/uploads/2021/08/main_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.visi{
+  margin-left: 200px;
+  flex: 1;
+}
+
+.visi-misi h2{
+font-size: 50px;
+}
+
+
+.misi{
+  margin: 100px;
+  flex: 1;
+}
+
+footer{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #015a83;
+  height: auto;
+  width: 100vw;
+  font-family: "Open Sans";
+  padding-top: 40px;
+  color: #fff;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.socials li{
+  margin: 0 10px;
+}
+.socials a{
+  text-decoration: none;
+  color: #fff;
+}
+.socials a i{
+  font-size: 1.1rem;
+  transition: color .4s ease;
+
+}
+.socials a:hover i{
+  color: aqua;
+}
+
+.footer-bottom{
+  background: #002435;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+
+
+
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
